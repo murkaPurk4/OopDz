@@ -1,0 +1,14 @@
+class IterableWithGenerator:
+    def __init__(self, data):
+        self.data = data
+
+    def __iter__(self):
+        for item in self.data:
+            yield item
+
+# Primerchik s generatorom))
+data = [1, 2, 3, 4, 5]
+iterable = IterableWithGenerator(data)
+
+for item in iterable:
+    print(item)
